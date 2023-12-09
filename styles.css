@@ -5,6 +5,10 @@
 .content {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  background-color: white;
 }
 
 .background {
@@ -12,6 +16,20 @@
   background-position: center;
 
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   width: 40vw;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 1px black solid;
+  border-right: none;
+}
+
+.background-description {
+  margin-top: auto;
+  margin-bottom: 0;
+  color: white;
+
+  font-size: max(12px, 100%);
 }
