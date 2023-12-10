@@ -45,7 +45,14 @@
               </div>
               <div class="input">
                 <label for="pwd">PASSWORD</label>
-                <input type="password" name="user-password" id="pwd" required />
+                <input
+                  type="password"
+                  name="user-password"
+                  id="pwd"
+                  minlength="8"
+                  placeholder="Min 8 characters"
+                  required
+                />
                 <span id="password-error"></span>
               </div>
             </div>
@@ -76,7 +83,9 @@
             </div>
           </div>
         </form>
-        <button id="sign-up">CREATE ACCOUNT</button>
+        <button onclick="createAccount()" class="btn-create" id="sign-up">
+          CREATE ACCOUNT
+        </button>
 
         <p>Already have an account? <a href="">Log in</a></p>
       </div>
