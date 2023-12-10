@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up Page</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="reset.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="content">
@@ -18,45 +18,63 @@
         </div>
       </div>
       <div class="form-container">
-        <h1>
-          This is not a real online service! You know you need something like
-          this in your life to help you realize your deepest dreams. Sign up
-          <em>now</em> to get started.
+        <h1 class="form-info">
+          This is not a real online service! You know you need something <br />
+          like this in your life to help you realize your deepest dreams. <br />
+          Sign up <em>now</em> to get started. <br /><br />
         </h1>
-        <h1>You <em>know</em> you want to.</h1>
-        <form id="sign-up" action="" method="post">
+        <h1 class="form-info">You <em>know</em> you want to.</h1>
+
+        <form id="sign-up" action="#" method="post">
           <h1>Let's do this</h1>
-          <ul>
-            <li>
-              <label for="firstname">FIRST NAME</label>
-
-              <input type="text" name="user-firstname" id="firstname" />
-
-              <label for="lastname">LAST NAME</label>
-
-              <input type="type" name="user-lastname" id="lastname" />
-            </li>
-            <li>
-              <label for="email">EMAIL</label>
-
-              <input type="email" name="user-email" id="email" />
-
-              <label for="phone">PHONE NUMBER</label>
-
-              <input type="tel" name="user-email" id="phone" />
-            </li>
-            <li>
-              <label for="pwd">PASSWORD</label>
-              <input type="password" name="user-password" id="pwd" />
-
-              <label for="confirm-pwd">CONFIRM PASSWORD</label>
-              <input
-                type="password"
-                name="user-confirm-password"
-                id="confirm-pwd"
-              />
-            </li>
-          </ul>
+          <div class="input-container">
+            <div class="inputs">
+              <div class="input">
+                <label for="firstname">FIRST NAME</label>
+                <input
+                  type="text"
+                  name="user-firstname"
+                  id="firstname"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="email">EMAIL</label>
+                <input type="email" name="user-email" id="email" />
+              </div>
+              <div class="input">
+                <label for="pwd">PASSWORD</label>
+                <input type="password" name="user-password" id="pwd" required />
+                <span id="password-error"></span>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input">
+                <label for="lastname">LAST NAME</label>
+                <input
+                  type="type"
+                  name="user-lastname"
+                  id="lastname"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" name="user-email" id="phone" />
+              </div>
+              <div class="input">
+                <label for="confirm-pwd">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  name="user-confirm-password"
+                  id="confirm-pwd"
+                  required
+                />
+              </div>
+            </div>
+          </div>
         </form>
         <button id="sign-up">CREATE ACCOUNT</button>
 
