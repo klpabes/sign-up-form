@@ -1,10 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 @font-face {
   font-family: "norse-bold";
   src: url(./assets/Norse-Bold.otf);
 }
 
+:root {
+  --button: #577f2e;
+  --background: white;
+  --form: #f8f9fa;
+  --focus: #6888e1;
+  --input: #e5e7eb;
+  --input-border: #f7f7f9;
+  --input-invalid: red;
+}
+
 * {
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .content {
@@ -13,7 +28,7 @@
   overflow: hidden;
 
   display: flex;
-  background-color: white;
+  background-color: var(--background);
 }
 
 .background {
@@ -21,25 +36,111 @@
   background-position: center;
 
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   width: 40vw;
 
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   border: 1px black solid;
   border-right: none;
 }
 
 .background-description {
-  margin-top: auto;
-  margin-bottom: 0;
-  color: white;
-
+  color: var(--background);
+  align-self: flex-end;
+  text-align: center;
   font-size: max(12px, 100%);
 }
 
-a {
+a,
+a:visited,
+a:active {
   color: inherit;
-  text-decoration: inherit;
+  text-decoration: underline;
+}
+
+/* form */
+.form-container {
+  width: 60%;
+  margin-top: 2%;
+
+  height: 1px;
+}
+.form-container > * {
+  padding-left: 2%;
+}
+
+form {
+  margin-left: 0;
+  background-color: var(--form);
+  border-radius: 0;
+  margin: 2% 0;
+  padding: 2%;
+  box-shadow: 2px 5px 5px gray;
+}
+
+.input-container {
+  display: flex;
+
+  margin-top: 1rem;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.inputs {
+  width: 50%;
+}
+
+label {
+  font-size: 100%;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+.input {
+  display: block;
+
+  appearance: none;
+  width: 80%;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 100%;
+  -webkit-appearance: none;
+}
+
+input {
+  background-color: var(--input);
+  font-size: 1rem;
+  border-radius: 5px;
+
+  border: 1px var(--input-border) solid;
+}
+
+input:focus {
+  border: 1px var(--focus) solid;
+  box-shadow: 2px 5px 5px gray;
+}
+
+input:invalid {
+  border: 1px var(--input-invalid) solid;
+}
+
+button[id="sign-up"] {
+  margin-left: 2%;
+  padding-left: 0;
+
+  background-color: var(--button);
+  color: var(--background);
+
+  box-shadow: 2px 5px 5px gray;
+
+  font-size: 1.5rem;
+  font-weight: 800;
+  height: 3rem;
+  padding: 0 1rem;
+
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 50px;
 }
