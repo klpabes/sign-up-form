@@ -40,17 +40,53 @@
   width: 40vw;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px black solid;
   border-right: none;
 }
 
+.logo-container {
+  height: 30vh;
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.logo > img {
+  height: 150px;
+}
+
+.logo > p {
+  color: white;
+  font-family: "norse-bold";
+  font-size: 8rem;
+}
+
+.logo > * {
+  opacity: 1;
+}
+
 .background-description {
+  height: 70vh;
   color: var(--background);
-  align-self: flex-end;
+  justify-self: flex-end;
   text-align: center;
   font-size: max(12px, 100%);
+
+  display: flex;
+  align-items: flex-end;
 }
 
 a,
